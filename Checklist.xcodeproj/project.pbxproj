@@ -15,6 +15,7 @@
 		97715CD3236FC00300325DEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97715CD1236FC00300325DEB /* LaunchScreen.storyboard */; };
 		97715CDB2371301A00325DEB /* Checklistitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97715CDA2371301A00325DEB /* Checklistitem.swift */; };
 		97715CDD23713A4100325DEB /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97715CDC23713A4100325DEB /* TodoList.swift */; };
+		97715CDF2373DE5F00325DEB /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97715CDE2373DE5F00325DEB /* AddItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		97715CD4236FC00300325DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97715CDA2371301A00325DEB /* Checklistitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklistitem.swift; sourceTree = "<group>"; };
 		97715CDC23713A4100325DEB /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		97715CDE2373DE5F00325DEB /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				97715CD4236FC00300325DEB /* Info.plist */,
 				97715CDA2371301A00325DEB /* Checklistitem.swift */,
 				97715CDC23713A4100325DEB /* TodoList.swift */,
+				97715CDE2373DE5F00325DEB /* AddItemTableViewController.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				97715CDD23713A4100325DEB /* TodoList.swift in Sources */,
 				97715CCB236FC00100325DEB /* ChecklistViewController.swift in Sources */,
+				97715CDF2373DE5F00325DEB /* AddItemTableViewController.swift in Sources */,
 				97715CC7236FC00100325DEB /* AppDelegate.swift in Sources */,
 				97715CC9236FC00100325DEB /* SceneDelegate.swift in Sources */,
 				97715CDB2371301A00325DEB /* Checklistitem.swift in Sources */,
