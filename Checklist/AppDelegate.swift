@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Checklist
-//
-//  Created by Chantal Demissie on 11/3/19.
-//  Copyright © 2019 Chantal Demissie. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
