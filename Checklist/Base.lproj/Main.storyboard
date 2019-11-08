@@ -15,26 +15,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="meg-ti-Cvl">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="meg-ti-Cvl">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="meg-ti-Cvl" id="YJz-vB-V3g">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="351" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xk-Ao-10i">
-                                            <rect key="frame" x="20" y="11.5" width="342" height="21"/>
+                                            <rect key="frame" x="28" y="11" width="323" height="22.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEJ-Tu-N2v">
+                                            <rect key="frame" x="13" y="10" width="15" height="24.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="9Xk-Ao-10i" secondAttribute="trailing" id="4Kj-pf-mCD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9Xk-Ao-10i" secondAttribute="trailing" constant="-8" id="4Kj-pf-mCD"/>
+                                        <constraint firstItem="vEJ-Tu-N2v" firstAttribute="centerY" secondItem="9Xk-Ao-10i" secondAttribute="centerY" id="8TO-6R-wPw"/>
+                                        <constraint firstItem="9Xk-Ao-10i" firstAttribute="leading" secondItem="vEJ-Tu-N2v" secondAttribute="trailing" id="9vr-Tz-zFu"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="9Xk-Ao-10i" secondAttribute="bottom" id="XCt-re-25V"/>
-                                        <constraint firstItem="9Xk-Ao-10i" firstAttribute="leading" secondItem="YJz-vB-V3g" secondAttribute="leadingMargin" id="zH3-bq-fay"/>
+                                        <constraint firstItem="vEJ-Tu-N2v" firstAttribute="centerY" secondItem="YJz-vB-V3g" secondAttribute="centerY" id="rLA-mt-uOM"/>
+                                        <constraint firstItem="vEJ-Tu-N2v" firstAttribute="top" secondItem="YJz-vB-V3g" secondAttribute="topMargin" constant="-1" id="rwN-tk-O96"/>
+                                        <constraint firstItem="9Xk-Ao-10i" firstAttribute="leading" secondItem="YJz-vB-V3g" secondAttribute="leadingMargin" constant="8" id="zH3-bq-fay"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CJo-Rt-ZSg" kind="show" identifier="EditItemSegue" trigger="accessoryAction" id="tIh-2a-Urc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,7 +58,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="8LI-59-SYK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kbf-H6-AlJ">
                             <connections>
-                                <segue destination="CJo-Rt-ZSg" kind="show" id="u6w-gl-xL0"/>
+                                <segue destination="CJo-Rt-ZSg" kind="show" identifier="AddItemSegue" id="u6w-gl-xL0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,7 +112,7 @@
                                 <action selector="cancel:" destination="CJo-Rt-ZSg" id="fHE-DT-3yw"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Add" id="7VJ-ln-iPR">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="7VJ-ln-iPR">
                             <connections>
                                 <action selector="done:" destination="CJo-Rt-ZSg" id="gIQ-o6-V63"/>
                             </connections>
@@ -134,4 +147,7 @@
             <point key="canvasLocation" x="-26.086956521739133" y="31.473214285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tIh-2a-Urc"/>
+    </inferredMetricsTieBreakers>
 </document>

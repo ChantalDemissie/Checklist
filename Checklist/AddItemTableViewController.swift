@@ -1,30 +1,50 @@
-//
-//  AddItemTableViewController.swift
-//  Checklist
-//
-//  Created by Chantal Demissie on 11/6/19.
-//  Copyright © 2019 Chantal Demissie. All rights reserved.
-//
-
 import UIKit
 
+protocol AddItemViewControllerDelegate: class {
+    
+    func addItemViewControllerDidCancel(_ controller: AddItemTableViewController)
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: ChecklistItem)
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishEditing item: ChecklistItem)
+}
+
 class AddItemTableViewController: UITableViewController {
+    
+    weak var delegate: AddItemViewControllerDelegate?
+    weak var todoList: TodoList?
+    weak var itemToEdit: ChecklistItem?
     
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var textField: UITextField!
+    
     @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        delegate?.addItemViewControllerDidCancel(self)
     }
+    
     @IBAction func done(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        if let item = itemToEdit, let text = textField.text {
+            item.text = text
+            delegate?.addItemViewController(self, didFinishEditing: item)
+        } else {
+            if let item = todoList?.newTodo() {
+            if let textFieldText = textField.text {
+                item.text = textFieldText
+            }
+            item.checked = false
+            delegate?.addItemViewController(self, didFinishAdding: item)
+        }
     }
+}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.text
+            addBarButton.isEnabled = true
+        }
         navigationItem.largeTitleDisplayMode = .never
         textField.delegate = self
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -42,11 +42,4 @@ class TodoList {
         todos.append(item)
         return item
     }
-    
-    private func randomTitle() -> String {
-        
-        var titles = ["New todo item", "generic todo", "fill me out", "much todo about nothing"]
-        let randomNumber = Int.random(in: 0 ... titles.count)
-        return titles[randomNumber]
-    }
 }
