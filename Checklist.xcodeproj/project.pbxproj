@@ -16,6 +16,7 @@
 		97715CDB2371301A00325DEB /* Checklistitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97715CDA2371301A00325DEB /* Checklistitem.swift */; };
 		97715CDD23713A4100325DEB /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97715CDC23713A4100325DEB /* TodoList.swift */; };
 		97715CDF2373DE5F00325DEB /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97715CDE2373DE5F00325DEB /* ItemDetailViewController.swift */; };
+		97ED691123767ED1002895DA /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ED691023767ED1002895DA /* ChecklistTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		97715CDA2371301A00325DEB /* Checklistitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklistitem.swift; sourceTree = "<group>"; };
 		97715CDC23713A4100325DEB /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		97715CDE2373DE5F00325DEB /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		97ED691023767ED1002895DA /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				97715CC8236FC00100325DEB /* SceneDelegate.swift */,
 				97715CCA236FC00100325DEB /* ChecklistViewController.swift */,
 				97715CCC236FC00100325DEB /* Main.storyboard */,
+				97ED691023767ED1002895DA /* ChecklistTableViewCell.swift */,
 				97715CCF236FC00300325DEB /* Assets.xcassets */,
 				97715CD1236FC00300325DEB /* LaunchScreen.storyboard */,
 				97715CD4236FC00300325DEB /* Info.plist */,
@@ -150,6 +153,7 @@
 				97715CDD23713A4100325DEB /* TodoList.swift in Sources */,
 				97715CCB236FC00100325DEB /* ChecklistViewController.swift in Sources */,
 				97715CDF2373DE5F00325DEB /* ItemDetailViewController.swift in Sources */,
+				97ED691123767ED1002895DA /* ChecklistTableViewCell.swift in Sources */,
 				97715CC7236FC00100325DEB /* AppDelegate.swift in Sources */,
 				97715CC9236FC00100325DEB /* SceneDelegate.swift in Sources */,
 				97715CDB2371301A00325DEB /* Checklistitem.swift in Sources */,

@@ -27,14 +27,14 @@ class ItemDetailViewController: UITableViewController {
             delegate?.itemDetailViewController(self, didFinishEditing: item)
         } else {
             if let item = todoList?.newTodo() {
-            if let textFieldText = textField.text {
-                item.text = textFieldText
+                if let textFieldText = textField.text {
+                    item.text = textFieldText
+                }
+                item.checked = false
+                delegate?.itemDetailViewController(self, didFinishAdding: item)
             }
-            item.checked = false
-            delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
-}
     
     override func viewDidLoad() {
         super.viewDidLoad()
